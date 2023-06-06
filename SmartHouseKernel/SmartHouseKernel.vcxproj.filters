@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы студии">
+      <UniqueIdentifier>{f76721b8-ba21-4ac5-902c-2322606f7fac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libSDL">
+      <UniqueIdentifier>{7dbb0219-0e39-47a7-89bc-4dbf3278acef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="_Source Files\Commands">
+      <UniqueIdentifier>{d8b71fd0-0dd7-4860-826a-8f2878820eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Source Files\SmartObjects">
+      <UniqueIdentifier>{2f9693cb-53e5-4bbe-b754-bd9bf196395e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Source Files\Utils">
+      <UniqueIdentifier>{53d7759e-0ad6-414a-9d8f-a9ee905dcfe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Source Files\Storage">
+      <UniqueIdentifier>{f6ed3594-bfc4-4273-960d-651859361c93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Файлы студии</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Файлы студии</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\begin_code.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\close_code.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_assert.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_atomic.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_audio.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_bits.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_blendmode.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_clipboard.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_android.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_iphoneos.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_macosx.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_minimal.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_pandora.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_psp.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_windows.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_winrt.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_config_wiz.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_copying.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_cpuinfo.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_egl.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_endian.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_error.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_events.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_filesystem.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_gamecontroller.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_gesture.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_haptic.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_hints.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_joystick.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_keyboard.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_keycode.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_loadso.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_log.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_main.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_messagebox.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_mixer.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_mouse.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_mutex.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_name.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengl.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengl_glext.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles2.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2ext.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2platform.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_khrplatform.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_pixels.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_platform.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_power.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_quit.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_rect.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_render.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_revision.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_rwops.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_scancode.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_shape.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_stdinc.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_surface.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_system.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_syswm.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_assert.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_common.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_compare.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_crc32.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_font.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_fuzzer.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_harness.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_images.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_log.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_md5.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_memory.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_test_random.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_thread.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_timer.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_touch.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_types.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_version.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_video.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libSDL\include\SDL_vulkan.h">
+      <Filter>libSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\BinLoader.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\BinStorer.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\TxtLoader.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\TxtStorer.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\LampObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\RoomObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\DoorObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\_IOpenCloseObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\_ISwitchOnOffObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\_Storer.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\_Loader.h">
+      <Filter>_Source Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
+      <Filter>_Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\MusicContext.h">
+      <Filter>_Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\_Command.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\_CommandHolder.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdClose.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdCreate.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdDelete.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdHelp.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdList.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdLoad.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdOpen.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdStore.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdSwitchOff.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdSwitchOn.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdVolume.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdExit.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\StringEx.h">
+      <Filter>_Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\_ObjectFactory.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\ConsoleManip.h">
+      <Filter>_Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdDemo.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdMusicPosition.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartObjects\_BaseObject.h">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>_Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdMusic.h">
+      <Filter>_Source Files\Commands</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Файлы студии</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage\BinLoader.cpp">
+      <Filter>_Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage\BinStorer.cpp">
+      <Filter>_Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage\TxtLoader.cpp">
+      <Filter>_Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage\TxtStorer.cpp">
+      <Filter>_Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartObjects\LampObject.cpp">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartObjects\RoomObject.cpp">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartObjects\DoorObject.cpp">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Context.cpp">
+      <Filter>_Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartHouseKernel.cpp">
+      <Filter>_Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\MusicContext.cpp">
+      <Filter>_Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\_CommandHolder.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdClose.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdCreate.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdDelete.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdHelp.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdList.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdLoad.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdOpen.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdStore.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdSwitchOff.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdSwitchOn.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdVolume.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdExit.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\StringEx.cpp">
+      <Filter>_Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartObjects\_ObjectFactory.cpp">
+      <Filter>_Source Files\SmartObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\ConsoleManip.cpp">
+      <Filter>_Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdDemo.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdMusicPosition.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>_Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdMusic.cpp">
+      <Filter>_Source Files\Commands</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

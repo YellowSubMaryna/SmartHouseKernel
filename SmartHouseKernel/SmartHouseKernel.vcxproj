@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5F14F881-5776-42B3-A3B2-A91502152B4D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SmartHouseKernel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libSDL\include\begin_code.h" />
+    <ClInclude Include="..\libSDL\include\close_code.h" />
+    <ClInclude Include="..\libSDL\include\SDL.h" />
+    <ClInclude Include="..\libSDL\include\SDL_assert.h" />
+    <ClInclude Include="..\libSDL\include\SDL_atomic.h" />
+    <ClInclude Include="..\libSDL\include\SDL_audio.h" />
+    <ClInclude Include="..\libSDL\include\SDL_bits.h" />
+    <ClInclude Include="..\libSDL\include\SDL_blendmode.h" />
+    <ClInclude Include="..\libSDL\include\SDL_clipboard.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_android.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_pandora.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_psp.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_windows.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_winrt.h" />
+    <ClInclude Include="..\libSDL\include\SDL_config_wiz.h" />
+    <ClInclude Include="..\libSDL\include\SDL_copying.h" />
+    <ClInclude Include="..\libSDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="..\libSDL\include\SDL_egl.h" />
+    <ClInclude Include="..\libSDL\include\SDL_endian.h" />
+    <ClInclude Include="..\libSDL\include\SDL_error.h" />
+    <ClInclude Include="..\libSDL\include\SDL_events.h" />
+    <ClInclude Include="..\libSDL\include\SDL_filesystem.h" />
+    <ClInclude Include="..\libSDL\include\SDL_gamecontroller.h" />
+    <ClInclude Include="..\libSDL\include\SDL_gesture.h" />
+    <ClInclude Include="..\libSDL\include\SDL_haptic.h" />
+    <ClInclude Include="..\libSDL\include\SDL_hints.h" />
+    <ClInclude Include="..\libSDL\include\SDL_joystick.h" />
+    <ClInclude Include="..\libSDL\include\SDL_keyboard.h" />
+    <ClInclude Include="..\libSDL\include\SDL_keycode.h" />
+    <ClInclude Include="..\libSDL\include\SDL_loadso.h" />
+    <ClInclude Include="..\libSDL\include\SDL_log.h" />
+    <ClInclude Include="..\libSDL\include\SDL_main.h" />
+    <ClInclude Include="..\libSDL\include\SDL_messagebox.h" />
+    <ClInclude Include="..\libSDL\include\SDL_mixer.h" />
+    <ClInclude Include="..\libSDL\include\SDL_mouse.h" />
+    <ClInclude Include="..\libSDL\include\SDL_mutex.h" />
+    <ClInclude Include="..\libSDL\include\SDL_name.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengl.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles2.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="..\libSDL\include\SDL_opengl_glext.h" />
+    <ClInclude Include="..\libSDL\include\SDL_pixels.h" />
+    <ClInclude Include="..\libSDL\include\SDL_platform.h" />
+    <ClInclude Include="..\libSDL\include\SDL_power.h" />
+    <ClInclude Include="..\libSDL\include\SDL_quit.h" />
+    <ClInclude Include="..\libSDL\include\SDL_rect.h" />
+    <ClInclude Include="..\libSDL\include\SDL_render.h" />
+    <ClInclude Include="..\libSDL\include\SDL_revision.h" />
+    <ClInclude Include="..\libSDL\include\SDL_rwops.h" />
+    <ClInclude Include="..\libSDL\include\SDL_scancode.h" />
+    <ClInclude Include="..\libSDL\include\SDL_shape.h" />
+    <ClInclude Include="..\libSDL\include\SDL_stdinc.h" />
+    <ClInclude Include="..\libSDL\include\SDL_surface.h" />
+    <ClInclude Include="..\libSDL\include\SDL_system.h" />
+    <ClInclude Include="..\libSDL\include\SDL_syswm.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_assert.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_common.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_compare.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_crc32.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_font.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_fuzzer.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_harness.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_images.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_log.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_md5.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_memory.h" />
+    <ClInclude Include="..\libSDL\include\SDL_test_random.h" />
+    <ClInclude Include="..\libSDL\include\SDL_thread.h" />
+    <ClInclude Include="..\libSDL\include\SDL_timer.h" />
+    <ClInclude Include="..\libSDL\include\SDL_touch.h" />
+    <ClInclude Include="..\libSDL\include\SDL_types.h" />
+    <ClInclude Include="..\libSDL\include\SDL_version.h" />
+    <ClInclude Include="..\libSDL\include\SDL_video.h" />
+    <ClInclude Include="..\libSDL\include\SDL_vulkan.h" />
+    <ClInclude Include="Commands\CmdMusic.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Commands\CmdClose.h" />
+    <ClInclude Include="Commands\CmdCreate.h" />
+    <ClInclude Include="Commands\CmdDelete.h" />
+    <ClInclude Include="Commands\CmdDemo.h" />
+    <ClInclude Include="Commands\CmdExit.h" />
+    <ClInclude Include="Commands\CmdHelp.h" />
+    <ClInclude Include="Commands\CmdList.h" />
+    <ClInclude Include="Commands\CmdLoad.h" />
+    <ClInclude Include="Commands\CmdMusicPosition.h" />
+    <ClInclude Include="Commands\CmdOpen.h" />
+    <ClInclude Include="Commands\CmdStore.h" />
+    <ClInclude Include="Commands\CmdSwitchOff.h" />
+    <ClInclude Include="Commands\CmdSwitchOn.h" />
+    <ClInclude Include="Commands\CmdVolume.h" />
+    <ClInclude Include="Commands\_Command.h" />
+    <ClInclude Include="Commands\_CommandHolder.h" />
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="SmartObjects\DoorObject.h" />
+    <ClInclude Include="SmartObjects\_IOpenCloseObject.h" />
+    <ClInclude Include="SmartObjects\_ISwitchOnOffObject.h" />
+    <ClInclude Include="SmartObjects\LampObject.h" />
+    <ClInclude Include="SmartObjects\RoomObject.h" />
+    <ClInclude Include="SmartObjects\_ObjectFactory.h" />
+    <ClInclude Include="SmartObjects\_BaseObject.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Storage\BinLoader.h" />
+    <ClInclude Include="Storage\BinStorer.h" />
+    <ClInclude Include="Storage\_Loader.h" />
+    <ClInclude Include="Storage\_Storer.h" />
+    <ClInclude Include="Storage\TxtLoader.h" />
+    <ClInclude Include="Storage\TxtStorer.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Utils\ConsoleManip.h" />
+    <ClInclude Include="Utils\MusicContext.h" />
+    <ClInclude Include="Utils\StringEx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Commands\CmdMusic.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Commands\CmdClose.cpp" />
+    <ClCompile Include="Commands\CmdCreate.cpp" />
+    <ClCompile Include="Commands\CmdDelete.cpp" />
+    <ClCompile Include="Commands\CmdDemo.cpp" />
+    <ClCompile Include="Commands\CmdExit.cpp" />
+    <ClCompile Include="Commands\CmdHelp.cpp" />
+    <ClCompile Include="Commands\CmdList.cpp" />
+    <ClCompile Include="Commands\CmdLoad.cpp" />
+    <ClCompile Include="Commands\CmdMusicPosition.cpp" />
+    <ClCompile Include="Commands\CmdOpen.cpp" />
+    <ClCompile Include="Commands\CmdStore.cpp" />
+    <ClCompile Include="Commands\CmdSwitchOff.cpp" />
+    <ClCompile Include="Commands\CmdSwitchOn.cpp" />
+    <ClCompile Include="Commands\CmdVolume.cpp" />
+    <ClCompile Include="Commands\_CommandHolder.cpp" />
+    <ClCompile Include="Context.cpp" />
+    <ClCompile Include="SmartHouseKernel.cpp" />
+    <ClCompile Include="SmartObjects\DoorObject.cpp" />
+    <ClCompile Include="SmartObjects\LampObject.cpp" />
+    <ClCompile Include="SmartObjects\RoomObject.cpp" />
+    <ClCompile Include="SmartObjects\_ObjectFactory.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Storage\BinLoader.cpp" />
+    <ClCompile Include="Storage\BinStorer.cpp" />
+    <ClCompile Include="Storage\TxtLoader.cpp" />
+    <ClCompile Include="Storage\TxtStorer.cpp" />
+    <ClCompile Include="Utils\ConsoleManip.cpp" />
+    <ClCompile Include="Utils\MusicContext.cpp" />
+    <ClCompile Include="Utils\StringEx.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
