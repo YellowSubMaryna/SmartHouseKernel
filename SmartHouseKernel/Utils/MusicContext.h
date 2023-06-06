@@ -3,6 +3,7 @@
 #include "../Storage/_Loader.h"
 #include "../Storage/_Storer.h"
 #include <vector>
+#include <filesystem>
 using namespace std;
 
 #define MIN_MAX_VOLUME 128
@@ -13,6 +14,7 @@ class CMusicContext
 {
 private:
     vector<string> m_vsFiles; // список доступных для воспроизведения файлов
+    vector<std::filesystem::path> m_vsDirectories; 
     int m_iCurFile; // номер текущего проигрываемого файла в m_vsFiles
     void* m_pMusic; // дескриптор библиотеки SDL для текущей мелодии
     DWORD m_nMusicStartTime; // момент запуска мелодии, считается как количество милисекунд после включения компьютера
@@ -46,6 +48,8 @@ public:
     bool SelectFirstFile(); // перейти к первому файлу
     void PrintAvailableMusics(CConsoleManip& cons) const;
     void ReloadMusicList();
+    bool AddDirectory2Playlist(string path);
+    bool RemoveDirectoryPlaylist(string path);
 
     bool Store(IStorer* pStorer);
     bool Load(ILoader* pLoader);

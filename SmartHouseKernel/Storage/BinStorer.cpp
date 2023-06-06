@@ -34,3 +34,13 @@ bool CBinStorer::Store(bool value)
     m_File.write(reinterpret_cast<const char*>(&value), sizeof(value));
     return m_File.good();
 }
+
+bool CBinStorer::Store(vector<filesystem::path> vec)
+{
+    Store(int(vec.size()));
+    for (auto& it : vec)
+    {
+        Store(it.string().c_str());
+    }
+    return m_File.good();
+}

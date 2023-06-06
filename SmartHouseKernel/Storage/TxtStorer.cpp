@@ -33,3 +33,13 @@ bool CTxtStorer::Store(bool value)
     m_File << (value ? "true" : "false") << endl;
     return m_File.good();
 }
+
+bool CTxtStorer::Store(vector<filesystem::path> vec)
+{
+    Store(int(vec.size()));
+    for (auto& it : vec)
+    {
+        Store(it.c_str());
+    }
+    return m_File.good();
+}

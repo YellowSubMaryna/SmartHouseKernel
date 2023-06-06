@@ -43,3 +43,17 @@ bool CBinLoader::Load(OUT bool& value)
     return m_File.good();
 }
 
+bool CBinLoader::Load(OUT vector<filesystem::path>& vec)
+{
+    int size = 0; 
+    Load(size);
+    vec.reserve(size);
+    for (int i = 0; i < size; ++i)
+    {
+        string temp;
+        Load(temp);
+        vec.push_back(filesystem::path(temp));
+    }
+    return m_File.good();
+}
+

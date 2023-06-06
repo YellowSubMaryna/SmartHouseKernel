@@ -55,6 +55,7 @@ bool CCmdMusic::Execute(CContext* pContext, vector<stringEx>& vParameters)
         return false;
     }
     stringEx par(vParameters[0]);
+    
     par.strlwr(); // сравниваем параметры без учёта регистра
     if (par == "play")
     {
@@ -95,7 +96,43 @@ bool CCmdMusic::Execute(CContext* pContext, vector<stringEx>& vParameters)
         pContext->m_ActiveModel.m_MusicContext.PrintAvailableMusics(pContext->m_Console);
         return true;
     }
-
+    if (par == "add")
+    {
+        if(vParameters.size() == 2)
+        {
+            stringEx par1(vParameters[1]);
+            if(!pContext->m_ActiveModel.m_MusicContext.AddDirectory2Playlist(par1))
+            {
+                pContext->m_Console << "Такой папки не существует" << endl;
+                return false;
+            }
+            else
+            {
+                pContext->m_ActiveModel.m_MusicContext.ReloadMusicList();
+                return true;
+            }
+        }
+        else
+        {
+            pContext->m_Console << "Путь не указан" << endl;
+            return false;
+        }
+    }
+    if (par == "remove")
+    {
+        if (vParameters.size() == 2)
+        {
+            stringEx par1(vParameters[1]);
+            pContext->m_ActiveModel.m_MusicContext.RemoveDirectoryPlaylist(par1);
+            pContext->m_ActiveModel.m_MusicContext.ReloadMusicList();
+            return true;
+        }
+        else
+        {
+            pContext->m_Console << "Путь не указан" << endl;
+            return false;
+        }
+    }
     // указан недопустимый параметр команды
     pContext->m_Console << "Неподдерживаемый параметр команды" << endl;
     return false;

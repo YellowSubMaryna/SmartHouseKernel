@@ -54,6 +54,7 @@ CMusicContext::CMusicContext()
 
 CMusicContext::~CMusicContext()
 {
+    filesystem::path;
     g_pMusicContext = nullptr;
     if (m_isPlaying)
         Mix_PauseMusic();
@@ -172,11 +173,12 @@ const char g_sMediaID[] = "Media"; // признак, что далее идут настройки проигрыв
 bool CMusicContext::Store(IStorer* pStorer)
 {
     return pStorer->Store(g_sMediaID) &&
+           pStorer->Store(m_vsDirectories) &&
            pStorer->Store(m_iCurFile) &&
            pStorer->Store(m_isPlaying) &&
            pStorer->Store(m_isPaused) &&
            pStorer->Store(Volume()) &&
-           pStorer->Store(Position());
+           pStorer->Store(Position()) ;
 }
 bool CMusicContext::Load(ILoader* pLoader)
 {
@@ -188,12 +190,16 @@ bool CMusicContext::Load(ILoader* pLoader)
     bool isPaused = false;
     int volume = MIN_MAX_VOLUME;
     int position = 0;
-    if (!pLoader->Load(OUT m_iCurFile) || 
+
+    m_vsDirectories.clear();
+    if (!pLoader->Load(OUT m_vsDirectories) ||
+        !pLoader->Load(OUT m_iCurFile) || 
         !pLoader->Load(OUT isPlaying) ||
         !pLoader->Load(OUT isPaused) ||
         !pLoader->Load(OUT volume) ||
         !pLoader->Load(OUT position))
         return false;
+    this->ReloadMusicList();
     if (isPlaying)
     {
         Play();
@@ -209,15 +215,40 @@ bool CMusicContext::Load(ILoader* pLoader)
 void CMusicContext::ReloadMusicList()
 {
     m_vsFiles.clear();
-    fs::path musicPath("../Music");
-    if (fs::exists(musicPath) && fs::is_directory(musicPath))
+    for (fs::path musicPath : m_vsDirectories) 
     {
-        for (auto const & entry : fs::recursive_directory_iterator(musicPath))
+        if (fs::exists(musicPath) && fs::is_directory(musicPath))
         {
-            if (fs::is_regular_file(entry) && entry.path().extension() == ".mp3")
-                m_vsFiles.push_back(entry.path().string());
+            for (auto const& entry : fs::recursive_directory_iterator(musicPath))
+            {
+                if (fs::is_regular_file(entry) && entry.path().extension() == ".mp3")
+                    m_vsFiles.push_back(entry.path().string());
+            }
         }
     }
+}
+
+bool CMusicContext::AddDirectory2Playlist(string path)
+{
+    fs::path musicPath(path);
+    if (fs::exists(musicPath) && fs::is_directory(musicPath))
+    {
+        m_vsDirectories.push_back(musicPath);
+        return true;
+    }
+    return false;
+}
+
+bool CMusicContext::RemoveDirectoryPlaylist(string path)
+{
+    fs::path musicPath(path);
+    auto it = std::find(m_vsDirectories.begin(), m_vsDirectories.end(), musicPath);
+    if(it != m_vsDirectories.end())
+    {
+        m_vsDirectories.erase(it);
+        return true;
+    }
+    return false;
 }
 
 bool CMusicContext::ReloadCurFile()

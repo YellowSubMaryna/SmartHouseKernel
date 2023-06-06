@@ -14,4 +14,6 @@ public:
     virtual bool Load(OUT string& str);
     virtual bool Load(OUT int& value);
     virtual bool Load(OUT bool& value);
+    virtual bool Load(OUT vector<filesystem::path>&);
+
 };
